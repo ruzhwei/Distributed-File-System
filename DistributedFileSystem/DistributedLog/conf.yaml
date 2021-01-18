@@ -1,0 +1,48 @@
+server_list:
+    -   id: 1
+        hostname: wrz1
+        ip: 192.168.0.101
+        logfile: vm1.log
+    -   id: 2
+        hostname: wrz2
+        ip: 192.168.0.102
+        logfile: vm2.log
+    -   id: 3
+        hostname: wrz3
+        ip: 192.168.0.103
+        logfile: vm3.log
+    -   id: 4
+        hostname: wrz4
+        ip: 192.168.0.104
+        logfile: vm4.log
+    -   id: 5
+        hostname: wrz5
+        ip: 192.168.0.105
+        logfile: vm5.log
+    -   id: 6
+        hostname: wrz6
+        ip: 192.168.0.106
+        logfile: vm6.log
+    -   id: 7
+        hostname: wrz7
+        ip: 192.168.0.107
+        logfile: vm7.log
+port: 2333
+log_path: /home/parallels/Desktop/
+test:
+    log_path: /home/parallels/Desktop/
+    size: 1000
+    frequency:
+        high: 0.3
+        regular: 0.1
+        low: 0.01
+    pattern:
+        high: ^[A-D][0-9]{4}$
+        regular: ^hi[0-9]{2,7}$
+        low: ^[0-9][P-Z]{5}$
+        random: ^[0-9]{2,10}[@()]{4,7}$
+    hit_servers:
+        -   2
+        -   3
+        -   7
+    speed_test_size: 100
